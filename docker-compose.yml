@@ -1,0 +1,19 @@
+graphql-server:
+  build: .
+  volumes:
+    - ".:/graphql_server"
+  ports:
+    - "3004:3004"
+  links:
+    - "mysql:mysql"
+mysql:
+  image: mysql:5.5
+  environment:
+    - MYSQL_ROOT_PASSWORD=mysql
+    - MYSQL_DATABASE=graphql_ex
+    - MYSQL_USER=mysql
+    - MYSQL_PASSWORD=mysql
+  volumes:
+    - ./seed:/docker-entrypoint-initdb.d
+  ports:
+    - "3306:3306"
