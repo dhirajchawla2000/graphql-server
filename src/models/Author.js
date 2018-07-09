@@ -1,7 +1,7 @@
 import Sequelize from 'sequelize';
 import sequelize from '../database';
 
-const Author = sequelize.define('author', {
+const Author = sequelize.define('authors', {
   id: {
     type: Sequelize.INTEGER,
     allowNull: false,
