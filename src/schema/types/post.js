@@ -17,5 +17,8 @@ export default `
 
     # Votes
     votes: Int
+
+    # Comments on Post
+    comments: [Comment]
   }
 `;

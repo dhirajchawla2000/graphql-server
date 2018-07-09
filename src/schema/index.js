@@ -4,6 +4,7 @@ import Mutation from './operations/Mutation';
 import Subscription from './operations/Subscription';
 import Post from './types/post';
 import Author from './types/author';
+import Comment from './types/comment';
 import resolvers from '../resolvers';
 
 const RootQuery = `
@@ -13,7 +14,7 @@ const RootQuery = `
 `;
 
 const schema = makeExecutableSchema({
-  typeDefs: [RootQuery, Post, Author],
+  typeDefs: [RootQuery, Post, Author, Comment],
   resolvers
 });
 

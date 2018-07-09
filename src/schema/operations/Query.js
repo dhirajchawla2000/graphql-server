@@ -5,5 +5,7 @@ export default `
     authors: [Author]
 
     post(id: Int!): Post
+
+    comments: [Comment]
   }
 `;
