@@ -9,6 +9,11 @@ const Author = sequelize.define('authors', {
     primaryKey: true
   },
 
+  uuid: {
+    type: Sequelize.STRING,
+    allowNull: false
+  },
+
   firstName: {
     type: Sequelize.STRING,
     allowNull: false
@@ -17,6 +22,16 @@ const Author = sequelize.define('authors', {
   lastName: {
     type: Sequelize.STRING,
     allowNull: false
+  },
+
+  createdAt: {
+    type: Sequelize.DATE,
+    allowNull: true
+  },
+
+  updatedAt: {
+    type: Sequelize.DATE,
+    allowNull: true
   }
 }, {
   timestamps: false

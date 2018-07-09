@@ -9,6 +9,11 @@ const Post = sequelize.define('posts', {
     primaryKey: true
   },
 
+  uuid: {
+    type: Sequelize.STRING,
+    allowNull: false
+  },
+
   title: {
     type: Sequelize.STRING,
     allowNull: false
@@ -26,6 +31,16 @@ const Post = sequelize.define('posts', {
 
   votes: {
     type: Sequelize.INTEGER,
+    allowNull: true
+  },
+
+  createdAt: {
+    type: Sequelize.DATE,
+    allowNull: true
+  },
+
+  updatedAt: {
+    type: Sequelize.DATE,
     allowNull: true
   }
 }, {
